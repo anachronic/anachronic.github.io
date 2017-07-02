@@ -1,0 +1,397 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>From Jekyll to Hexo | Developing all over</title>
+  <meta name="author" content="anachronic">
+  
+  <meta name="description" content="Random ramblings about Arch Linux, Emacs and some development ad">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="From Jekyll to Hexo"/>
+  <meta property="og:site_name" content="Developing all over"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Developing all over" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Developing all over</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-07-02T11:51:00.000Z"><a href="/2017/07/02/from-jekyll-to-hexo/">2017-07-02</a></time>
+      
+      
+  
+    <h1 class="title">From Jekyll to Hexo</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        
+
+<p>
+The idea of having a blog has been in my mind for a long time.
+</p>
+
+<p>
+In fact, I had a blog prior to this one, which was built on top of
+<a href="https://jekyllrb.com/" target="_blank" rel="external">Jekyll</a>. To be honest, I have tried Ruby many times, but have never
+felt like it was something for me, or maybe I haven't really spent
+enough time to discover what it has to offer.
+</p>
+
+<p>
+Either way, I find Ruby and Jekyll to be a little annoying to install
+and mantain, which is why my old blog was left unmantained.
+</p>
+
+<p>
+In this blog post I'll describe some of the features I search for, and
+why I chose Hexo.
+</p>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">What I'm looking for</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+As I said before, I'm not much of a Ruby guy, I spend my days writing
+Javascript and Python for the most part. I've lately become very
+familiar with the workflow of these programming languages and their
+tools.
+</p>
+
+<p>
+I'm also a heavy Emacs user, and thus I prefer to use org-mode for
+writing documents and whatnot. It is by far better than markdown, I'm
+really used to it and the fact that it can be parsed and exported
+makes it a very versatile markup language for emacs users.
+</p>
+
+<p>
+So, in the end, what I wanted was a blogging system that allowed me to
+write my posts in org mode, preferably not having to export it to
+anything, and I wanted this system to <b>just work</b>.
+</p>
+
+<p>
+Needless to say, Jekyll was not it.
+</p>
+</div>
+
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1">Problems</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+I will say once again that <b>I'm not a Ruby guy</b>.
+</p>
+
+<p>
+I'll just list the problems:
+</p>
+
+<ol class="org-ol">
+<li>After every Ruby update, gems had to be reinstalled, because the
+path to gems got broken.
+</li>
+<li>I had to either write markdown or export an org file to Jekyll, save
+it and rename it.
+</li>
+<li>I had to manually set the date in the file name for every post.
+</li>
+</ol>
+
+<p>
+My problem was mostly with the second point, because I believe that
+having to mantain two copies of files is a little moronic, to say the
+least.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">The paradigm shift</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+This past week, Mike Zamansky released a <a href="http://cestlaz.github.io/posts/using-emacs-35-blogging/" target="_blank" rel="external">blog post and video</a> on how he
+blogs, explaining why he moved away from Jekyll to <a href="https://getnikola.com/blog/index.html" target="_blank" rel="external">Nikola</a> and it made
+so much sense to me, because i was having the same problems with it.
+</p>
+
+<p>
+At the same time, on one project I'm working on, we decided to move
+some code away from jQuery to AngularJS, and to manage our
+dependencies with <a href="https://yarnpkg.com/lang/en/" target="_blank" rel="external">yarn</a>. To be honest, I've never been prone to change,
+but this change to AngularJS made me think about how the Front-End
+community is gravitating toward Javascript and RESTful services. I
+hear there's even backend servers for Node.JS.
+</p>
+
+<p>
+So, in short: The Web development community is gravitating towards
+javascript (at least in this era) and we should use the tools we feel
+the most comfortable with.
+</p>
+
+<p>
+And so I thought: yeah, let's ditch Jekyll and let's build something
+on top of Javascript.
+</p>
+
+<p>
+I have to say I am <b>very</b> comfortable with Python as well, but I feel
+like I should really get into the Javascript world.
+</p>
+
+<p>
+That's when i discovered Hexo. A quick search in Google led me to
+<a href="https://www.staticgen.com/" target="_blank" rel="external">StaticGen</a>, which pointed me to Hexo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Moving to Hexo</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a> is a static site generator built on top of Javascript that
+provides every feature I ever desired for a static site generator,
+<i>and more</i>.
+</p>
+
+<p>
+With it I can:
+</p>
+
+<ul class="org-ul">
+<li>Write every post with org mode and just be done with it.
+</li>
+<li>Deploy to github effortlessly.
+</li>
+<li>Manage it from Emacs.
+</li>
+<li>Learn some Javascript.
+</li>
+</ul>
+
+<p>
+And, of course <b>it doesn't break</b>.
+</p>
+
+<p>
+I'll shortly describe what I've added to Hexo to make it work with
+Emacs and org-mode.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">Emacs workflow</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+I'm sure someone else can explain better how to install Hexo, so I
+won't go over that. Instead, I'll describe how to set up org mode and
+Emacs to work with this awesome static site generator
+</p>
+
+<p>
+I installed the org mode parser:
+</p>
+
+<pre class="example">
+yarn add hexo-renderer-org
+</pre>
+
+<p>
+Which lets me write every post with org-mode and Hexo will properly
+generate the site without me having to export my org mode files.
+</p>
+
+<p>
+And, the one I believe is the killer, is <a href="https://github.com/kuanyui/hexo.el" target="_blank" rel="external">hexo.el</a>, an extension for
+Emacs which allows me to manage all of my Hexo site from within
+Emacs. Hell, I don't even need a shell for this now.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">Conclusion</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+While I think I still have some time to get used to this, Hexo looks
+very promising as a static site generator for Emacs users. The worflow
+features a very rich management environment provided by hexo.el and a
+very solid org mode parser which allows its user to write posts using
+Emacs org-mode.
+</p>
+</div>
+</div>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/blogging/">blogging</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/blogging/">blogging</a>, <a href="/tags/jekyll/">jekyll</a>, <a href="/tags/hexo/">hexo</a>, <a href="/tags/rant/">rant</a>, <a href="/tags/emacs/">emacs</a>, <a href="/tags/org-mode/">org-mode</a>
+  </div>
+
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Kommentare</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="http://anachronic.github.io/2017/07/02/from-jekyll-to-hexo/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:anachronic.github.io">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">Kategorien</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/blogging/">blogging</a><small>1</small></li>
+  
+    <li><a href="/categories/linux/">linux</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/archlinux/">archlinux</a><small>1</small></li>
+  
+    <li><a href="/tags/blogging/">blogging</a><small>1</small></li>
+  
+    <li><a href="/tags/emacs/">emacs</a><small>1</small></li>
+  
+    <li><a href="/tags/hexo/">hexo</a><small>1</small></li>
+  
+    <li><a href="/tags/jekyll/">jekyll</a><small>1</small></li>
+  
+    <li><a href="/tags/linux/">linux</a><small>1</small></li>
+  
+    <li><a href="/tags/org-mode/">org-mode</a><small>1</small></li>
+  
+    <li><a href="/tags/rant/">rant</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2017 anachronic
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>

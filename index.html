@@ -1,0 +1,587 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Developing all over</title>
+  <meta name="author" content="anachronic">
+  
+  <meta name="description" content="Random ramblings about Arch Linux, Emacs and some development ad">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="Developing all over"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Developing all over" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Developing all over</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-07-02T11:51:00.000Z"><a href="/2017/07/02/from-jekyll-to-hexo/">2017-07-02</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2017/07/02/from-jekyll-to-hexo/">From Jekyll to Hexo</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        
+
+<p>
+The idea of having a blog has been in my mind for a long time.
+</p>
+
+<p>
+In fact, I had a blog prior to this one, which was built on top of
+<a href="https://jekyllrb.com/" target="_blank" rel="external">Jekyll</a>. To be honest, I have tried Ruby many times, but have never
+felt like it was something for me, or maybe I haven't really spent
+enough time to discover what it has to offer.
+</p>
+
+<p>
+Either way, I find Ruby and Jekyll to be a little annoying to install
+and mantain, which is why my old blog was left unmantained.
+</p>
+
+<p>
+In this blog post I'll describe some of the features I search for, and
+why I chose Hexo.
+</p>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">What I'm looking for</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+As I said before, I'm not much of a Ruby guy, I spend my days writing
+Javascript and Python for the most part. I've lately become very
+familiar with the workflow of these programming languages and their
+tools.
+</p>
+
+<p>
+I'm also a heavy Emacs user, and thus I prefer to use org-mode for
+writing documents and whatnot. It is by far better than markdown, I'm
+really used to it and the fact that it can be parsed and exported
+makes it a very versatile markup language for emacs users.
+</p>
+
+<p>
+So, in the end, what I wanted was a blogging system that allowed me to
+write my posts in org mode, preferably not having to export it to
+anything, and I wanted this system to <b>just work</b>.
+</p>
+
+<p>
+Needless to say, Jekyll was not it.
+</p>
+</div>
+
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1">Problems</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+I will say once again that <b>I'm not a Ruby guy</b>.
+</p>
+
+<p>
+I'll just list the problems:
+</p>
+
+<ol class="org-ol">
+<li>After every Ruby update, gems had to be reinstalled, because the
+path to gems got broken.
+</li>
+<li>I had to either write markdown or export an org file to Jekyll, save
+it and rename it.
+</li>
+<li>I had to manually set the date in the file name for every post.
+</li>
+</ol>
+
+<p>
+My problem was mostly with the second point, because I believe that
+having to mantain two copies of files is a little moronic, to say the
+least.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">The paradigm shift</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+This past week, Mike Zamansky released a <a href="http://cestlaz.github.io/posts/using-emacs-35-blogging/" target="_blank" rel="external">blog post and video</a> on how he
+blogs, explaining why he moved away from Jekyll to <a href="https://getnikola.com/blog/index.html" target="_blank" rel="external">Nikola</a> and it made
+so much sense to me, because i was having the same problems with it.
+</p>
+
+<p>
+At the same time, on one project I'm working on, we decided to move
+some code away from jQuery to AngularJS, and to manage our
+dependencies with <a href="https://yarnpkg.com/lang/en/" target="_blank" rel="external">yarn</a>. To be honest, I've never been prone to change,
+but this change to AngularJS made me think about how the Front-End
+community is gravitating toward Javascript and RESTful services. I
+hear there's even backend servers for Node.JS.
+</p>
+
+<p>
+So, in short: The Web development community is gravitating towards
+javascript (at least in this era) and we should use the tools we feel
+the most comfortable with.
+</p>
+
+<p>
+And so I thought: yeah, let's ditch Jekyll and let's build something
+on top of Javascript.
+</p>
+
+<p>
+I have to say I am <b>very</b> comfortable with Python as well, but I feel
+like I should really get into the Javascript world.
+</p>
+
+<p>
+That's when i discovered Hexo. A quick search in Google led me to
+<a href="https://www.staticgen.com/" target="_blank" rel="external">StaticGen</a>, which pointed me to Hexo.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Moving to Hexo</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a> is a static site generator built on top of Javascript that
+provides every feature I ever desired for a static site generator,
+<i>and more</i>.
+</p>
+
+<p>
+With it I can:
+</p>
+
+<ul class="org-ul">
+<li>Write every post with org mode and just be done with it.
+</li>
+<li>Deploy to github effortlessly.
+</li>
+<li>Manage it from Emacs.
+</li>
+<li>Learn some Javascript.
+</li>
+</ul>
+
+<p>
+And, of course <b>it doesn't break</b>.
+</p>
+
+<p>
+I'll shortly describe what I've added to Hexo to make it work with
+Emacs and org-mode.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">Emacs workflow</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+I'm sure someone else can explain better how to install Hexo, so I
+won't go over that. Instead, I'll describe how to set up org mode and
+Emacs to work with this awesome static site generator
+</p>
+
+<p>
+I installed the org mode parser:
+</p>
+
+<pre class="example">
+yarn add hexo-renderer-org
+</pre>
+
+<p>
+Which lets me write every post with org-mode and Hexo will properly
+generate the site without me having to export my org mode files.
+</p>
+
+<p>
+And, the one I believe is the killer, is <a href="https://github.com/kuanyui/hexo.el" target="_blank" rel="external">hexo.el</a>, an extension for
+Emacs which allows me to manage all of my Hexo site from within
+Emacs. Hell, I don't even need a shell for this now.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">Conclusion</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+While I think I still have some time to get used to this, Hexo looks
+very promising as a static site generator for Emacs users. The worflow
+features a very rich management environment provided by hexo.el and a
+very solid org mode parser which allows its user to write posts using
+Emacs org-mode.
+</p>
+</div>
+</div>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-09-25T21:10:00.000Z"><a href="/2016/09/25/archlinux-laptop/">2016-09-25</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2016/09/25/archlinux-laptop/">Configuring an Asus Zenbook with Arch Linux</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        
+
+<p>
+I recently got my hands on a brand new <a href="http://www.pcadvisor.co.uk/review/laptops/asus-zenbook-ux303u-review-3632053/" target="_blank" rel="external">Asus Zenbook UX303</a> and it
+looks quite nice. So I did the first thing I wanted to do with it
+right away: <b>Install Arch Linux</b>. Yeah, I've been using Arch for quite
+a bit now on my desktop PC and I fell in love with it from the very
+first time I used it. No PPA nonsense, easy development and, to be
+honest, I'm quite used to its workflow.
+</p>
+
+<p>
+Since the laptop came bundled with Windows, there was some work to
+do. I downloaded Arch Linux, made a bootable USB Flash Drive using
+<a href="https://rufus.akeo.ie/" target="_blank" rel="external">Rufus</a> and started with the installation right away. The guide can be
+found on the <a href="https://wiki.archlinux.org/index.php/installation_guide" target="_blank" rel="external">Arch Wiki</a>.
+</p>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">UEFI on Arch</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+The process is quite straightforward if you read carefully. I got kind
+of stuck at this because, well, I like to do the process fast, but it
+can't always be like that.  <b>Do <i>not</i> forget to use <code>gdisk</code> for GPT
+partitions</b>.
+</p>
+
+<p>
+Also, some little but useful pointers:
+</p>
+
+<ul class="org-ul">
+<li>The boot partition has to be <i>EFI System Partition</i>, which has code <code>EF00</code>.
+</li>
+<li>This partition also has to be set to <code>FAT32</code>.
+</li>
+</ul>
+
+<p>
+The rest is easy, just follow the guide. Nothing out of the
+ordinary. I'm sure people explain this better on youtube.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">GNOME</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+I've been using GNOME for quite some time and I'm quite happy with
+it. There are some critical extensions that have to be installed to
+make it usable but that's ok. I'll write about it some other time.
+</p>
+
+<p>
+Anyway, not everything works out of the box here, most of it is on the
+<a href="https://wiki.archlinux.org/" target="_blank" rel="external">ArchWiki</a>. I'll explain what i went through.
+</p>
+</div>
+
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1">WiFi</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+WiFi is quite a pain to configure without a GUI. You need sudo and it
+gets kind of annoying. Just install <a href="https://wiki.archlinux.org/index.php/NetworkManager" target="_blank" rel="external">NetworkManager</a>, set it up (in GNOME
+gets as easy as just starting a service) and be done with it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2">Bluetooth</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Same thing here. Just <a href="https://wiki.archlinux.org/index.php/bluetooth" target="_blank" rel="external">follow the wiki</a>, install the packages, enable
+the service. Done.
+</p>
+
+<p>
+You might want to get this right in order to share Internet Connection
+with your cellphone. I have a Galaxy A5 2016 and it works flawlessly.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3">The rest</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+I had no problems with anything else. The rest of the stuff should
+work out of the box.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Hardware</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+This is the point where things get tricky. It took me quite a while to
+figure these issues out, and thats what made me want to do this post.
+</p>
+</div>
+
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1">Keyboard.</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+I'm quite fond of the keyboard in this model though it could be nicer
+to have media keys. While the keyboard in this model has a lot of
+keys, I only find important to be able to control screen brightness,
+keyboard backlight and volume. I haven't really tested anything else.
+</p>
+
+<p>
+The Keyboard brightness and Volume keys worked right out of the box
+for me, as did the disable touchpad button. Unfortunately, i can't say
+the same thing about the brightness keys, as they do <b>not</b> work out of
+the box. It's not so bad though, because GNOME's user panel <b>can</b>
+control the screen backlight, which provides an usable workaround.
+</p>
+
+<p>
+I did a little research and it turned out my ACPI was working, it was
+just that the OS couldn't handle the keys. Long story short, adding
+these options to my kernel made my backlight keys work:
+</p>
+
+<pre class="example">
+acpi_osi= acpi_backlight=none
+</pre>
+
+<p>
+With <code>systemd-boot</code>, you have to append the text to the <code>options</code>
+line. In my case, it was the file
+<code>/boot/loader/entries/arch.conf</code>. <code>acpi_osi=</code> makes the keys work but
+they don't do anything, and <code>acpi_backlight=none</code> rebinds everything
+to the <code>backlight_intel</code> interface.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2">GPU</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+GPU is probably the most tricky feature to set up in this model.
+</p>
+
+<p>
+<a href="https://wiki.archlinux.org/index.php/bumblebee" target="_blank" rel="external">The ArchWiki</a> has an article on how to set up Bumblebee in order to get
+the best of both worlds: Integrated graphics and dedicated video
+card. I must say I gave it endless tries to get it working and it -to
+some extent- does work. But only until i close the laptop. It then
+becomes unusable.
+</p>
+
+<p>
+I still have problems with this, so i won't be advising on this
+matter. I will say, though, that gaming on a 14 inch laptop is not
+really the best setup. I still have my desktop for that.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3">Battery discharging</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+I found out some months after I wrote this post, that nothing gets
+restored after the battery dies.
+</p>
+
+<p>
+Honestly I don't really want to test this feature, because bad things
+can happen: my battery can reduce its life or I might not get it to
+work on the first time. I can live with it, though, because the
+battery duration is quite good.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">Conclusion</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+After months of using this laptop I have to say it is one of the
+smoothest computers I've ever used, it rarely freezes and it doesnt
+really overheat. Trying Linux on this laptop is definetly worth a
+try. I've been using it for around 9 months now and have barely had
+any problems
+</p>
+</div>
+</div>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+<nav id="pagination">
+  
+  
+  <div class="clearfix"></div>
+</nav></div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:anachronic.github.io">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">Kategorien</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/blogging/">blogging</a><small>1</small></li>
+  
+    <li><a href="/categories/linux/">linux</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/archlinux/">archlinux</a><small>1</small></li>
+  
+    <li><a href="/tags/blogging/">blogging</a><small>1</small></li>
+  
+    <li><a href="/tags/emacs/">emacs</a><small>1</small></li>
+  
+    <li><a href="/tags/hexo/">hexo</a><small>1</small></li>
+  
+    <li><a href="/tags/jekyll/">jekyll</a><small>1</small></li>
+  
+    <li><a href="/tags/linux/">linux</a><small>1</small></li>
+  
+    <li><a href="/tags/org-mode/">org-mode</a><small>1</small></li>
+  
+    <li><a href="/tags/rant/">rant</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2017 anachronic
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Configuring an Asus Zenbook with Arch Linux | Developing all over</title>
+  <meta name="author" content="anachronic">
+  
+  <meta name="description" content="Random ramblings about Arch Linux, Emacs and some development ad">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Configuring an Asus Zenbook with Arch Linux"/>
+  <meta property="og:site_name" content="Developing all over"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Developing all over" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Developing all over</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-09-25T21:10:00.000Z"><a href="/2016/09/25/archlinux-laptop/">2016-09-25</a></time>
+      
+      
+  
+    <h1 class="title">Configuring an Asus Zenbook with Arch Linux</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        
+
+<p>
+I recently got my hands on a brand new <a href="http://www.pcadvisor.co.uk/review/laptops/asus-zenbook-ux303u-review-3632053/" target="_blank" rel="external">Asus Zenbook UX303</a> and it
+looks quite nice. So I did the first thing I wanted to do with it
+right away: <b>Install Arch Linux</b>. Yeah, I've been using Arch for quite
+a bit now on my desktop PC and I fell in love with it from the very
+first time I used it. No PPA nonsense, easy development and, to be
+honest, I'm quite used to its workflow.
+</p>
+
+<p>
+Since the laptop came bundled with Windows, there was some work to
+do. I downloaded Arch Linux, made a bootable USB Flash Drive using
+<a href="https://rufus.akeo.ie/" target="_blank" rel="external">Rufus</a> and started with the installation right away. The guide can be
+found on the <a href="https://wiki.archlinux.org/index.php/installation_guide" target="_blank" rel="external">Arch Wiki</a>.
+</p>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">UEFI on Arch</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+The process is quite straightforward if you read carefully. I got kind
+of stuck at this because, well, I like to do the process fast, but it
+can't always be like that.  <b>Do <i>not</i> forget to use <code>gdisk</code> for GPT
+partitions</b>.
+</p>
+
+<p>
+Also, some little but useful pointers:
+</p>
+
+<ul class="org-ul">
+<li>The boot partition has to be <i>EFI System Partition</i>, which has code <code>EF00</code>.
+</li>
+<li>This partition also has to be set to <code>FAT32</code>.
+</li>
+</ul>
+
+<p>
+The rest is easy, just follow the guide. Nothing out of the
+ordinary. I'm sure people explain this better on youtube.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">GNOME</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+I've been using GNOME for quite some time and I'm quite happy with
+it. There are some critical extensions that have to be installed to
+make it usable but that's ok. I'll write about it some other time.
+</p>
+
+<p>
+Anyway, not everything works out of the box here, most of it is on the
+<a href="https://wiki.archlinux.org/" target="_blank" rel="external">ArchWiki</a>. I'll explain what i went through.
+</p>
+</div>
+
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1">WiFi</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+WiFi is quite a pain to configure without a GUI. You need sudo and it
+gets kind of annoying. Just install <a href="https://wiki.archlinux.org/index.php/NetworkManager" target="_blank" rel="external">NetworkManager</a>, set it up (in GNOME
+gets as easy as just starting a service) and be done with it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2">Bluetooth</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Same thing here. Just <a href="https://wiki.archlinux.org/index.php/bluetooth" target="_blank" rel="external">follow the wiki</a>, install the packages, enable
+the service. Done.
+</p>
+
+<p>
+You might want to get this right in order to share Internet Connection
+with your cellphone. I have a Galaxy A5 2016 and it works flawlessly.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3">The rest</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+I had no problems with anything else. The rest of the stuff should
+work out of the box.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Hardware</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+This is the point where things get tricky. It took me quite a while to
+figure these issues out, and thats what made me want to do this post.
+</p>
+</div>
+
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1">Keyboard.</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+I'm quite fond of the keyboard in this model though it could be nicer
+to have media keys. While the keyboard in this model has a lot of
+keys, I only find important to be able to control screen brightness,
+keyboard backlight and volume. I haven't really tested anything else.
+</p>
+
+<p>
+The Keyboard brightness and Volume keys worked right out of the box
+for me, as did the disable touchpad button. Unfortunately, i can't say
+the same thing about the brightness keys, as they do <b>not</b> work out of
+the box. It's not so bad though, because GNOME's user panel <b>can</b>
+control the screen backlight, which provides an usable workaround.
+</p>
+
+<p>
+I did a little research and it turned out my ACPI was working, it was
+just that the OS couldn't handle the keys. Long story short, adding
+these options to my kernel made my backlight keys work:
+</p>
+
+<pre class="example">
+acpi_osi= acpi_backlight=none
+</pre>
+
+<p>
+With <code>systemd-boot</code>, you have to append the text to the <code>options</code>
+line. In my case, it was the file
+<code>/boot/loader/entries/arch.conf</code>. <code>acpi_osi=</code> makes the keys work but
+they don't do anything, and <code>acpi_backlight=none</code> rebinds everything
+to the <code>backlight_intel</code> interface.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2">GPU</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+GPU is probably the most tricky feature to set up in this model.
+</p>
+
+<p>
+<a href="https://wiki.archlinux.org/index.php/bumblebee" target="_blank" rel="external">The ArchWiki</a> has an article on how to set up Bumblebee in order to get
+the best of both worlds: Integrated graphics and dedicated video
+card. I must say I gave it endless tries to get it working and it -to
+some extent- does work. But only until i close the laptop. It then
+becomes unusable.
+</p>
+
+<p>
+I still have problems with this, so i won't be advising on this
+matter. I will say, though, that gaming on a 14 inch laptop is not
+really the best setup. I still have my desktop for that.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3">Battery discharging</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+I found out some months after I wrote this post, that nothing gets
+restored after the battery dies.
+</p>
+
+<p>
+Honestly I don't really want to test this feature, because bad things
+can happen: my battery can reduce its life or I might not get it to
+work on the first time. I can live with it, though, because the
+battery duration is quite good.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">Conclusion</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+After months of using this laptop I have to say it is one of the
+smoothest computers I've ever used, it rarely freezes and it doesnt
+really overheat. Trying Linux on this laptop is definetly worth a
+try. I've been using it for around 9 months now and have barely had
+any problems
+</p>
+</div>
+</div>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/linux/">linux</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/archlinux/">archlinux</a>, <a href="/tags/linux/">linux</a>
+  </div>
+
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Kommentare</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="http://anachronic.github.io/2016/09/25/archlinux-laptop/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:anachronic.github.io">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">Kategorien</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/blogging/">blogging</a><small>1</small></li>
+  
+    <li><a href="/categories/linux/">linux</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/archlinux/">archlinux</a><small>1</small></li>
+  
+    <li><a href="/tags/blogging/">blogging</a><small>1</small></li>
+  
+    <li><a href="/tags/emacs/">emacs</a><small>1</small></li>
+  
+    <li><a href="/tags/hexo/">hexo</a><small>1</small></li>
+  
+    <li><a href="/tags/jekyll/">jekyll</a><small>1</small></li>
+  
+    <li><a href="/tags/linux/">linux</a><small>1</small></li>
+  
+    <li><a href="/tags/org-mode/">org-mode</a><small>1</small></li>
+  
+    <li><a href="/tags/rant/">rant</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2017 anachronic
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
